@@ -273,62 +273,136 @@ ul {
   padding: 1.5rem 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  pointer-events: none;
+  /* Let clicks pass through header area except nav */
 }
 
-.header.scrolled {
-  background: rgba(2, 0, 16, 0.85);
-  backdrop-filter: blur(12px);
-  padding: 1rem 0;
-  border-bottom: 1px solid var(--glass-border);
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.logo span {
-  color: var(--accent-cyan);
-}
-
-.nav-links {
+.header-container {
   display: flex;
-  gap: 2rem;
+  justify-content: center;
+  /* Center the dock */
+  align-items: center;
 }
 
-.nav-links a {
+.nav-dock {
+  pointer-events: auto;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  /* Ultra-transparent */
+  backdrop-filter: blur(24px);
+  /* Stronger blur for frosted glass */
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   position: relative;
-  font-weight: 500;
+}
+
+.nav-icon {
+  position: relative;
   color: var(--text-secondary);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.nav-links a:hover {
+.nav-icon:hover {
   color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.nav-links a::after {
+.nav-icon.active {
+  color: #d8b4fe;
+  /* Light purple active icon */
+  text-shadow: 0 0 10px rgba(123, 44, 191, 0.5);
+}
+
+/* Tooltip */
+.nav-tooltip {
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+  background: rgba(15, 5, 36, 0.9);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  pointer-events: none;
+  border: 1px solid var(--glass-border);
+}
+
+.nav-icon:hover .nav-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Spotlight / Lamp Effect */
+.nav-lamp {
+  position: absolute;
+  top: -22px;
+  /* Position above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(to bottom, rgba(157, 78, 221, 0.6), transparent);
+  /* Purple gradient */
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  /* Trapezoid shape */
+  filter: blur(4px);
+  opacity: 0.8;
+  animation: lampPulse 2s infinite ease-in-out;
+  pointer-events: none;
+  transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Main sliding transition */
+}
+
+/* Small glow dot at the top of the lamp */
+.nav-lamp::before {
   content: '';
   position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: var(--accent-cyan);
-  transition: width 0.3s ease;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 4px;
+  background: var(--primary-glow);
+  /* Purple glow */
+  border-radius: 4px;
+  box-shadow: 0 0 10px var(--primary-purple);
 }
 
-.nav-links a:hover::after {
-  width: 100%;
-}
+@keyframes lampPulse {
 
-/* Mobile Menu */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
+  0%,
+  100% {
+    opacity: 0.6;
+    height: 25px;
   }
 
-  /* Temporary: Add mobile menu later if needed */
+  50% {
+    opacity: 1;
+    height: 35px;
+  }
+}
+
+/* Header Scrolled State - Make it slightly more compact */
+.header.scrolled .nav-dock {
+  padding: 0.6rem 1.5rem;
+  border-color: rgba(255, 255, 255, 0.2);
+  /* No background override! */
 }
 
 /* Hero Section */
