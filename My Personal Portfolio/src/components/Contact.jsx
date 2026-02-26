@@ -35,9 +35,9 @@ const Contact = () => {
                     <div className="contact-form-placeholder">
                         {/* Visual representation of a "connected" state or a simple form */}
                         <form onSubmit={(e) => e.preventDefault()} className="simple-form">
-                            <input type="text" placeholder="Name" className="form-input" />
-                            <input type="email" placeholder="Email" className="form-input" />
-                            <textarea placeholder="Message" className="form-textarea"></textarea>
+                            <input type="text" id="name" name="name" autoComplete="name" placeholder="Name" className="form-input" />
+                            <input type="email" id="email" name="email" autoComplete="email" placeholder="Email" className="form-input" />
+                            <textarea id="message" name="message" placeholder="Message" className="form-textarea"></textarea>
                             <button className="btn-primary" style={{ width: '100%' }}>Send Message</button>
                         </form>
                     </div>

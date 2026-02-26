@@ -1411,3 +1411,6 @@ ul {
     height: 150px;
   }
 }
+/* Enable pointer events on interactive UI layers over the 3D Canvas */
+section, header, footer, .hud-container { pointer-events: auto; }
+

@@ -1,0 +1,164 @@
+.global-hud {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    pointer-events: none;
+    /* Let clicks pass through empty space */
+}
+
+.glass-panel {
+    background: rgba(15, 15, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 0.5rem;
+    pointer-events: auto;
+    /* Re-enable clicks for the panel */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hud-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-btn.active-lite {
+    color: #ff9f1c;
+    /* Amber color indicating safe mode */
+    background: rgba(255, 159, 28, 0.1);
+}
+
+.hud-nav {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem 0;
+
+    /* Hide by default on all screens */
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    transform-origin: top right;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hud-nav.open {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.hud-nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.hud-nav-item {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    min-width: 160px;
+    height: 36px;
+    position: relative;
+    z-index: 2;
+}
+
+.hud-nav-item:hover {
+    color: #fff;
+}
+
+.hud-nav-item.active {
+    color: #00f3ff;
+    /* Electric blue accent */
+    font-weight: 600;
+}
+
+.hud-label {
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.hud-active-indicator {
+    position: absolute;
+    left: 0.25rem;
+    top: 1rem;
+    width: 3px;
+    height: 36px;
+    background: #00f3ff;
+    /* Electric blue */
+    border-radius: 4px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    /* Bouncy spring transition */
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    z-index: 1;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .global-hud {
+        top: auto;
+        bottom: 2rem;
+        right: 1.5rem;
+    }
+
+    .hud-controls {
+        flex-direction: column-reverse;
+    }
+
+    .hud-nav {
+        position: absolute;
+        bottom: 100%;
+        /* Push up from bottom */
+        right: 0;
+        margin-bottom: 1rem;
+        transform-origin: bottom right;
+    }
+
+    .hud-nav.open {
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* Enable pointer events on interactive UI layers over the 3D Canvas */
+section>.container,
+header,
+footer,
+.hud-container {
+    pointer-events: auto;
+}

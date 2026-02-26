@@ -29,13 +29,17 @@ const Projects = () => {
                 <h2 className="section-title">Featured Projects</h2>
                 <div className="projects-grid">
                     {projects.map((project, index) => (
-                        <TiltCard key={index} className="project-card glass-card blurred-card">
-                            <div className="project-background" style={{ background: project.image }}></div>
-                            <div className="coming-soon-overlay">
-                                <span style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔒</span>
-                                <h3 style={{ marginBottom: '0.25rem' }}>Coming Soon</h3>
-                                <p style={{ fontSize: '0.8rem', opacity: 0.8 }}>{project.title}</p>
-                            </div>
+                        <TiltCard key={index} className="project-card glass-card blurred-card" style={{ overflow: 'hidden' }}>
+                            {(isHovered) => (
+                                <>
+                                    <div className="project-background" style={{ background: project.image, zIndex: 1, position: 'relative' }}></div>
+                                    <div className="coming-soon-overlay" style={{ zIndex: 2, position: 'relative', pointerEvents: 'none' }}>
+                                        <span style={{ fontSize: '2rem', marginBottom: '0.5rem' }}>🔒</span>
+                                        <h3 style={{ marginBottom: '0.25rem' }}>Coming Soon</h3>
+                                        <p style={{ fontSize: '0.8rem', opacity: 0.8 }}>{project.title}</p>
+                                    </div>
+                                </>
+                            )}
                         </TiltCard>
                     ))}
                 </div>
