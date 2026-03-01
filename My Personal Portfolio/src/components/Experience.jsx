@@ -5,20 +5,26 @@ const experience = [
     {
         role: "Computer Science Engineer",
         company: "Academic & Personal Projects",
-        year: "2023 - Present",
+        year: "2023 - 2024",
         desc: "Leading development of complex systems, from AI algorithms to full-stack applications. Focusing on clean architecture and scalable code."
     },
     {
         role: "Cybersecurity Analyst",
         company: "Independent Research",
-        year: "2024 - Present",
+        year: "2024 - 2025",
         desc: "Conducting vulnerability assessments, penetration testing, and designing secure network protocols."
     },
     {
         role: "AI & ML Explorer",
         company: "Self-Driven Studies",
-        year: "2025 - Present",
+        year: "2025 - 2026",
         desc: "Experimenting with neural networks, natural language processing, and predictive analytics to solve real-world problems."
+    },
+    {
+        role: "WebGL & Frontend Innovator",
+        company: "Personal Portfolio & Projects",
+        year: "2026 - Present",
+        desc: "Architecting immersive 3D web experiences, optimizing performance, and building interactive generative AI interfaces and Geospatial HUDs."
     }
 ];
 

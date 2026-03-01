@@ -17,6 +17,7 @@ export const PortfolioProvider = ({ children }) => {
 
     const [activeSection, setActiveSection] = useState('hero');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     // Toggle Lite Mode manually
     const toggleLiteMode = () => {
@@ -53,7 +54,9 @@ export const PortfolioProvider = ({ children }) => {
         activeSection,
         setActiveSection,
         isMenuOpen,
-        setIsMenuOpen
+        setIsMenuOpen,
+        isBookingOpen,
+        setIsBookingOpen
     };
 
     return (

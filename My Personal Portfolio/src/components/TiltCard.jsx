@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 
-const TiltCard = ({ children, className = '' }) => {
+const TiltCard = ({ children, className = '', style = {} }) => {
     const cardRef = useRef(null);
     const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg)');
     const [isHovered, setIsHovered] = useState(false);
@@ -47,6 +47,7 @@ const TiltCard = ({ children, className = '' }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
+                ...style,
                 transform,
                 transition: 'transform 0.1s ease-out, box-shadow 0.3s ease',
                 boxShadow: isHovered ? '0 10px 40px rgba(157, 78, 221, 0.4)' : '0 8px 32px 0 rgba(0, 0, 0, 0.5)',

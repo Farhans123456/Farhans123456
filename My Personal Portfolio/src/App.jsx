@@ -12,6 +12,7 @@ import Traits from './components/Traits';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DevModeOverlay from './components/ui/DevModeOverlay';
+import BookingForm from './components/BookingForm';
 
 const GalaxyHero = React.lazy(() => import('./components/three/r3f/GalaxyHero'));
 
@@ -30,6 +31,7 @@ const AppContent = () => {
     <div className="app-main" style={{ position: 'relative', zIndex: 1 }}>
       <HUD />
       <DevModeOverlay />
+      <BookingForm />
 
       {!isLiteMode && (
         <Suspense fallback={null}>

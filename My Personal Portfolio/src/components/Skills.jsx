@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const skills = [
-    { id: 'sec', name: "Cybersecurity", icon: "🛡️", x: 20, y: 30, color: "#ff3366" },
-    { id: 'ai', name: "AI & ML", icon: "🤖", x: 75, y: 25, color: "#00f3ff" },
-    { id: 'math', name: "Mathematics", icon: "📐", x: 45, y: 15, color: "#a200ff" },
-    { id: 'prog', name: "Programming", icon: "💻", x: 50, y: 80, color: "#10b981" },
-    { id: 'vid', name: "Video Editing", icon: "🎬", x: 25, y: 70, color: "#f59e0b" },
-    { id: 'tech', name: "Emerging Tech", icon: "🚀", x: 80, y: 65, color: "#8b5cf6" }
+    { id: 'sec', name: "Cybersecurity", icon: "🛡️", x: 20, y: 30, color: "#ff3366", details: "Conducting vulnerability assessments, penetration testing, and designing secure network protocols to protect critical infrastructure." },
+    { id: 'ai', name: "AI & ML", icon: "🤖", x: 75, y: 25, color: "#00f3ff", details: "Experimenting with neural networks, natural language processing, and predictive analytics to solve complex problems and build generative models." },
+    { id: 'math', name: "Mathematics", icon: "📐", x: 45, y: 15, color: "#a200ff", details: "Applying advanced mathematical concepts including linear algebra, calculus, and probability theory to optimize algorithms and data structures." },
+    { id: 'prog', name: "Programming", icon: "💻", x: 50, y: 80, color: "#10b981", details: "Writing clean, scalable, and efficient code across multiple languages and paradigms to build robust full-stack applications and systems." },
+    { id: 'vid', name: "Video Editing", icon: "🎬", x: 25, y: 70, color: "#f59e0b", details: "Crafting compelling visual narratives through advanced video editing, motion graphics, and post-production techniques." },
+    { id: 'tech', name: "Emerging Tech", icon: "🚀", x: 80, y: 65, color: "#8b5cf6", details: "Exploring and integrating cutting-edge technologies like WebGL, Three.js, and decentralized systems to push the boundaries of modern web experiences." }
 ];
 
 const connections = [
@@ -17,6 +17,7 @@ const connections = [
 
 const SkillsMap = () => {
     const [hoveredNode, setHoveredNode] = useState(null);
+    const [activeSkill, setActiveSkill] = useState(null);
     const [mousePos, setMousePos] = useState({ x: 50, y: 50 });
 
     const handleMouseMove = (e) => {
@@ -89,6 +90,7 @@ const SkillsMap = () => {
                     <div
                         key={skill.id}
                         onMouseEnter={() => setHoveredNode(skill.id)}
+                        onClick={() => setActiveSkill(skill)}
                         style={{
                             position: 'absolute',
                             left: `${skill.x}%`,
@@ -141,6 +143,95 @@ const SkillsMap = () => {
                     </div>
                 );
             })}
+
+            {/* Active Skill Modal Overlay */}
+            {activeSkill && (
+                <div style={{
+                    position: 'absolute',
+                    inset: 0,
+                    background: 'rgba(5, 5, 10, 0.85)',
+                    backdropFilter: 'blur(10px)',
+                    zIndex: 20,
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    transition: 'opacity 0.3s ease',
+                    cursor: 'pointer'
+                }}
+                    onClick={() => setActiveSkill(null)}
+                >
+                    <div style={{
+                        background: 'rgba(20, 20, 30, 0.95)',
+                        border: `1px solid ${activeSkill.color}`,
+                        borderRadius: '24px',
+                        padding: '2.5rem 2rem',
+                        maxWidth: '420px',
+                        width: '90%',
+                        textAlign: 'center',
+                        boxShadow: `0 0 50px ${activeSkill.color}44`,
+                        position: 'relative',
+                        cursor: 'default', // Prevent clicking inside card from closing
+                    }}
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button
+                            onClick={() => setActiveSkill(null)}
+                            style={{
+                                position: 'absolute',
+                                top: '15px',
+                                right: '20px',
+                                background: 'transparent',
+                                border: 'none',
+                                color: 'rgba(255,255,255,0.4)',
+                                fontSize: '1.5rem',
+                                cursor: 'pointer',
+                                transition: 'color 0.2s',
+                                padding: '5px'
+                            }}
+                            onMouseEnter={(e) => e.target.style.color = '#fff'}
+                            onMouseLeave={(e) => e.target.style.color = 'rgba(255,255,255,0.4)'}
+                        >
+                            ✕
+                        </button>
+
+                        <div style={{
+                            width: '80px',
+                            height: '80px',
+                            borderRadius: '50%',
+                            background: `linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02))`,
+                            border: `2px solid ${activeSkill.color}`,
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            fontSize: '36px',
+                            margin: '0 auto 1.5rem auto',
+                            boxShadow: `0 0 25px ${activeSkill.color}66`,
+                            position: 'relative'
+                        }}>
+                            {activeSkill.icon}
+                        </div>
+
+                        <h3 style={{
+                            color: '#ffffff',
+                            fontSize: '1.75rem',
+                            fontWeight: '700',
+                            marginBottom: '1rem',
+                            textShadow: `0 0 15px ${activeSkill.color}AA`
+                        }}>
+                            {activeSkill.name}
+                        </h3>
+
+                        <p style={{
+                            color: 'rgba(255,255,255,0.7)',
+                            lineHeight: '1.6',
+                            fontSize: '1.05rem',
+                            margin: 0
+                        }}>
+                            {activeSkill.details}
+                        </p>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };

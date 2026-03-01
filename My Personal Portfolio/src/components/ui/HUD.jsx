@@ -4,7 +4,7 @@ import { Zap, ZapOff, Menu, X, Home, User, Briefcase, FileText, Code, Mail } fro
 import './HUD.css'; // We'll create this next
 
 const HUD = () => {
-    const { isLiteMode, toggleLiteMode, activeSection, isMenuOpen, setIsMenuOpen } = usePortfolio();
+    const { isLiteMode, toggleLiteMode, activeSection, isMenuOpen, setIsMenuOpen, setIsBookingOpen } = usePortfolio();
 
     const navItems = [
         { id: 'hero', icon: <Home size={18} />, label: 'Home' },
@@ -12,7 +12,8 @@ const HUD = () => {
         { id: 'services', icon: <Briefcase size={18} />, label: 'Services' },
         { id: 'experience', icon: <FileText size={18} />, label: 'Experience' },
         { id: 'projects', icon: <Code size={18} />, label: 'Projects' },
-        { id: 'contact', icon: <Mail size={18} />, label: 'Contact' }
+        { id: 'contact', icon: <Mail size={18} />, label: 'Contact' },
+        { id: 'book', icon: <User size={18} />, label: 'Book Appointment', action: 'book' }
     ];
 
     const scrollToSection = (id) => {
@@ -21,6 +22,15 @@ const HUD = () => {
             element.scrollIntoView({ behavior: 'smooth' });
         }
         setIsMenuOpen(false);
+    };
+
+    const handleNavClick = (item) => {
+        if (item.action === 'book') {
+            usePortfolio().setIsBookingOpen(true);
+            setIsMenuOpen(false);
+        } else {
+            scrollToSection(item.id);
+        }
     };
 
     return (
@@ -50,8 +60,16 @@ const HUD = () => {
                         <button
                             key={item.id}
                             className={`hud-nav-item ${activeSection === item.id ? 'active' : ''}`}
-                            onClick={() => scrollToSection(item.id)}
+                            onClick={() => {
+                                if (item.action === 'book') {
+                                    setIsBookingOpen(true);
+                                    setIsMenuOpen(false);
+                                } else {
+                                    scrollToSection(item.id);
+                                }
+                            }}
                             title={item.label}
+                            style={item.action === 'book' ? { color: '#00f3ff', borderTop: '1px solid rgba(0, 243, 255, 0.2)', marginTop: '8px', paddingTop: '8px' } : {}}
                         >
                             <span className="hud-icon">{item.icon}</span>
                             <span className="hud-label">{item.label}</span>
