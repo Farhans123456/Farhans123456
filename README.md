@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&pause=1000&color=F7DF1E&center=true&vCenter=true&width=600&lines=Hi+there,+I'm+Farhan+Shaikh!+%F0%9F%91%8B;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=40&pause=1000&color=F7DF1E&center=true&vCenter=true&width=800&lines=Hi+there,+I'm+Farhan+Shaikh!+%F0%9F%91%8B;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
 </h1>
 
 <p align="center">
@@ -32,8 +32,9 @@
 ## 📊 GitHub Metrics & Activity
 
 > **Note:** The image below is dynamically generated using [lowlighter/metrics](https://github.com/lowlighter/metrics) via GitHub Actions!
+> *It will appear as a broken image until the Action runs successfully for the first time.*
 <p align="center">
-  <img src="github-metrics.svg" alt="GitHub Metrics Image" />
+  <img src="github-metrics.svg" alt="GitHub Metrics Image (Waiting for GitHub Actions...)" />
 </p>
 
 <br>
@@ -124,5 +125,7 @@
 ---
 
 <p align="center">
-  <a href="https://visitcount.itsvg.in"><img src="https://visitcount.itsvg.in/api?id=Farhans123456&icon=4&color=0" alt="Visitor Badge"/></a>
+  <a href="https://visitcount.itsvg.in">
+    <img src="https://visitcount.itsvg.in/api?id=Farhans123456&icon=4&color=0" alt="Visitor Badge"/>
+  </a>
 </p>
