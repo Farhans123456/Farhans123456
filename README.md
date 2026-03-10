@@ -18,12 +18,38 @@
 
 ---
 
-## 📊 GitHub Metrics & Activity
+## 📊 GitHub Metrics & Activity (Animated Elements)
 
-> **Note:** The image below is dynamically generated using [lowlighter/metrics](https://github.com/lowlighter/metrics) via GitHub Actions!
-> *It will appear as a broken image until the Action runs successfully for the first time.*
+> **Note:** The images below are individually generated GIFs/SVGs via GitHub Actions.
+> *They will appear as broken images until the new Action runs successfully!*
+
+### ⭐ Core Stats
 <p align="center">
-  <img src="github-metrics.svg" alt="GitHub Metrics Image (Waiting for GitHub Actions...)" />
+  <img src="github-metrics-base.svg" alt="GitHub Base Metrics" />
+</p>
+
+### 📅 Contribution Calendar
+<p align="center">
+  <img src="github-metrics-isocalendar.svg" alt="GitHub Isocalendar" />
+</p>
+
+### 🐍 Connect the Dots (Contribution Snake GIF)
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="github-snake.svg">
+    <img alt="github contribution snake animation" src="github-snake.svg">
+  </picture>
+</p>
+
+### 🚀 Coding Habits
+<p align="center">
+  <img src="github-metrics-habits.svg" alt="GitHub Coding Habits" />
+</p>
+
+### 💻 Language Distribution
+<p align="center">
+  <img src="github-metrics-languages.svg" alt="GitHub Top Languages" />
 </p>
 
 <br>

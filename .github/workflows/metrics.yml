@@ -13,20 +13,77 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Base Metrics
+        uses: lowlighter/metrics@latest
         with:
+          filename: github-metrics-base.svg
           token: ${{ secrets.GITHUB_TOKEN }}
           user: YTxFSGAMERz
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
+          
+      - name: Isocalendar (Animated)
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics-isocalendar.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: YTxFSGAMERz
+          template: classic
+          base: ""
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
+          config_timezone: Asia/Kolkata
+
+      - name: Habits
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics-habits.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: YTxFSGAMERz
+          template: classic
+          base: ""
           plugin_habits: yes
           plugin_habits_from: 200
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
+          config_timezone: Asia/Kolkata
+
+      - name: Languages
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics-languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          user: YTxFSGAMERz
+          template: classic
+          base: ""
           plugin_languages: yes
           plugin_languages_colors: github
           plugin_languages_threshold: 0%
+
+  generate-snake:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: Generate GitHub Contribution Snake (Animated SVG/GIF)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: YTxFSGAMERz
+          outputs: |
+            github-snake.svg
+            github-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Push Snake to Repository
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Generates Contribution Snake"
