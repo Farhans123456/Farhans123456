@@ -79,7 +79,7 @@ jobs:
           github_user_name: YTxFSGAMERz
           outputs: |
             github-snake.svg
-            github-snake-dark.svg?palette=github-dark
+            github-snake-dark.svg?color_snake=#00f3ff&color_dots=#020010,#1a0b2e,#3c1a71,#7b2cbf,#9d4edd
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           

@@ -1,114 +1,105 @@
-<h1 align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=35&pause=1000&color=F7DF1E&center=true&vCenter=true&width=800&lines=Hi+there,+I'm+Farhan+Shaikh!+%F0%9F%91%8B;Welcome+to+my+GitHub+Profile!" alt="Typing SVG" />
-</h1>
+<div align="center">
+  <!-- Custom Neon Animated SVG matching the user's Portfolio Theme -->
+  <img src="assets/animated-header.svg" alt="Animated Neon Header" width="100%" />
 
-<p align="center">
-  <em>Leveling up in coding and gaming 🚀</em><br>
-  I'm currently working on AI agents, web apps, and experimental projects using modern APIs and automation tools! <br><br>
-</p>
+  <h3>Leveling up in coding and gaming 🚀</h3>
+  
+  <p>
+    <b>I'm currently working on AI agents, web apps, and experimental projects using modern APIs and automation tools!</b>
+  </p>
 
-<!-- Social Links with Hover Effects -->
-<p align="center">
-  <a href="https://linkedin.com/in/farhan-shaikh-753551358"><img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" target="_blank"></a>
-  <a href="https://github.com/YTxFSGAMERz"><img src="https://img.shields.io/badge/GitHub-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" target="_blank"></a>
-  <a href="mailto:f98561965@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" target="_blank"></a>
-  <a href="https://discord.gg/Qd6mZA4kpH"><img src="https://img.shields.io/badge/Discord-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" target="_blank"></a>
-  <a href="https://x.com/Farhan95213"><img src="https://img.shields.io/badge/X-black.svg?style=for-the-badge&logo=X&logoColor=white" alt="X" target="_blank"></a>
-</p>
+  <br>
 
----
+  <!-- Interactive Premium Socials via SkillIcons -->
+  <a href="https://linkedin.com/in/farhan-shaikh-753551358"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"></a>
+  <a href="https://github.com/YTxFSGAMERz"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></a>
+  <a href="mailto:f98561965@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" alt="Email"></a>
+  <a href="https://discord.gg/Qd6mZA4kpH"><img src="https://skillicons.dev/icons?i=discord" alt="Discord"></a>
+  <a href="https://x.com/Farhan95213"><img src="https://skillicons.dev/icons?i=twitter" alt="Twitter"></a>
 
-## 📊 GitHub Metrics & Activity (Animated Elements)
+</div>
 
-> **Note:** The images below are individually generated GIFs/SVGs via GitHub Actions.
-> *They will appear as broken images until the new Action runs successfully!*
+<br><br>
 
-### ⭐ Core Stats
-<p align="center">
-  <img src="github-metrics-base.svg" alt="GitHub Base Metrics" />
-</p>
+## 📊 Dynamic Activity & Metrics
+> *The elements below are individually generated animated GIFs/SVGs via GitHub Actions. If you see broken links, the automated workflow is currently generating them!*
+
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <h3>⭐ GitHub Core Stats</h3>
+      <img src="github-metrics-base.svg" alt="Base Metrics" width="100%" />
+    </td>
+    <td width="50%" align="center">
+      <h3>💻 Language Distribution</h3>
+      <img src="github-metrics-languages.svg" alt="Top Languages" width="100%" />
+    </td>
+  </tr>
+</table>
 
 ### 📅 Contribution Calendar
-<p align="center">
-  <img src="github-metrics-isocalendar.svg" alt="GitHub Isocalendar" />
-</p>
-
-### 🐍 Connect the Dots (Contribution Snake GIF)
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="github-snake.svg">
-    <img alt="github contribution snake animation" src="github-snake.svg">
-  </picture>
-</p>
-
-### 🚀 Coding Habits
-<p align="center">
-  <img src="github-metrics-habits.svg" alt="GitHub Coding Habits" />
-</p>
-
-### 💻 Language Distribution
-<p align="center">
-  <img src="github-metrics-languages.svg" alt="GitHub Top Languages" />
-</p>
+<div align="center">
+  <img src="github-metrics-isocalendar.svg" alt="Isocalendar" width="100%" />
+</div>
 
 <br>
 
+### 🐍 Animated Contribution Snake (Cyber Theme)
 <div align="center">
-  <a href="https://github.com/YTxFSGAMERz">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=YTxFSGAMERz&theme=radical&hide_border=true" alt="GitHub Streak" />
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="github-snake.svg">
+    <img alt="github contribution snake animation" src="github-snake-dark.svg" width="100%">
+  </picture>
 </div>
 
----
+<br>
 
-## 🛠️ Interactive Tech Stack *(Click to expand!)*
+<table width="100%">
+  <tr>
+    <td width="50%" align="center">
+      <h3>🚀 Coding Habits</h3>
+      <img src="github-metrics-habits.svg" alt="Coding Habits" width="100%" />
+    </td>
+    <td width="50%" align="center">
+      <h3>🔥 Open Source Streak</h3>
+      <br>
+      <a href="https://github.com/YTxFSGAMERz">
+        <img src="https://github-readme-streak-stats.herokuapp.com/?user=YTxFSGAMERz&theme=tokyonight&hide_border=true" alt="Streak Stats" width="100%" />
+      </a>
+    </td>
+  </tr>
+</table>
 
-<details>
+<br><br>
+
+## 🛠️ Tech Stack & Arsenal
+
+<details open>
   <summary><b>🌐 Languages & Core Tech</b></summary>
   <br>
   <p align="center">
-    <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python">
-    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript">
-    <img src="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript">
-    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
-    <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
-    <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" alt="C#">
-    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
-    <img src="https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white" alt="Go">
+    <img src="https://skillicons.dev/icons?i=py,js,ts,html,cpp,cs,java,go&perline=8" />
   </p>
 </details>
 
-<details>
+<details open>
   <summary><b>💻 Frameworks & Libraries</b></summary>
   <br>
   <p align="center">
-    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React">
-    <img src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" alt="Next JS">
-    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS">
-    <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS">
-    <img src="https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white" alt="Vite">
-    <img src="https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white" alt="NestJS">
-    <img src="https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white" alt="Flutter">
+    <img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,tailwind,vite,nestjs,flutter&perline=8" />
   </p>
 </details>
 
-<details>
+<details open>
   <summary><b>🗄️ Database & Cloud</b></summary>
   <br>
   <p align="center">
-    <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
-    <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
-    <img src="https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-    <img src="https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase">
-    <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="Firebase">
-    <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS">
-    <img src="https://img.shields.io/badge/GoogleCloud-%234285F4.svg?style=for-the-badge&logo=google-cloud&logoColor=white" alt="Google Cloud">
-    <img src="https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel">
+    <img src="https://skillicons.dev/icons?i=postgres,mongodb,mysql,supabase,firebase,aws,gcp,vercel&perline=8" />
   </p>
 </details>
 
-<details>
+<details open>
   <summary><b>🤖 AI & Data Science</b></summary>
   <br>
   <p align="center">
@@ -119,10 +110,10 @@
   </p>
 </details>
 
----
+<hr>
 
 <p align="center">
   <a href="https://komarev.com/ghpvc/?username=YTxFSGAMERz">
-    <img src="https://komarev.com/ghpvc/?username=YTxFSGAMERz&style=flat-square&color=blue" alt="Visitor Badge"/>
+    <img src="https://komarev.com/ghpvc/?username=YTxFSGAMERz&style=flat-square&color=8A2BE2" alt="Visitor Badge"/>
   </a>
 </p>
